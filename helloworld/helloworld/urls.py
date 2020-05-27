@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls), 
     path('', include('pages.urls')),
     path('new_page/', include('pages.urls')),
+    path('blog/', include('pages.urls')),
 ]  
 
 #http://localhost:8000/admin/ = path('admin/', admin.site.urls)

@@ -5,6 +5,9 @@
         {% for date in entry.creation_date %}
             {% if date.month < 5 %}
                 <h2>Older posts</h2>
+            {% else %}
+                <h1>Latest posts</h1>
+            {% endif %}
                 <h5><i>{{ entry.list_of_comments }}</i></h5>
                 <ul>
                     <li>{{ entry.author_name }} 's blog.</li>
@@ -19,25 +22,7 @@
                 {% elif entry.image == 'Fashion' %}
                 <img src="https://reduceriastazi.com/wp-content/uploads/2018/01/fashion.jpg" 
                 alt="Fashion" width="200" height="150" />
-                {% endif %}
-            {% else %}
-                <h1>Latest posts</h1>
-                <h5><i>{{ entry.list_of_comments }}</i></h5>
-                <ul>
-                    <li>{{ entry.author_name }} 's blog.</li>
-                    <li>{{ entry.image }}</li> 
-                </ul>
-                {% if entry.image == 'Python' %}
-                    <img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" 
-                    alt="Python" width="200" height="150" /> 
-                {% elif entry.image == 'Travel' %}
-                    <img src="https://www.beachbash.com.au/wp-content/uploads/2019/06/193335.jpg" 
-                    alt="Travel" width="200" height="150" />
-                {% elif entry.image == 'Fashion' %}
-                    <img src="https://reduceriastazi.com/wp-content/uploads/2018/01/fashion.jpg" 
-                    alt="Fashion" width="200" height="150" />
-                {% endif %}
-            {% endif %}
+                {% endif %}    
         {% endfor %}
     {% endfor %}
 {% endblock %}
